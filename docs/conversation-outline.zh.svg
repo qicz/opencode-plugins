@@ -1,0 +1,110 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" width="1200" height="760" role="img" aria-label="对话大纲 — zh-Hans">
+  <rect width="1200" height="760" fill="#eef0f3"/>
+  <rect x="40" y="30" width="1120" height="700" rx="14" fill="#ffffff" stroke="#dfe3e8"/>
+  <path d="M40 74h1120" stroke="#e8ebef"/>
+
+  <circle cx="66" cy="52" r="5" fill="#ff5f57"/>
+  <circle cx="84" cy="52" r="5" fill="#febc2e"/>
+  <circle cx="102" cy="52" r="5" fill="#28c840"/>
+  <text x="124" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="13" font-weight="600" fill="#111827">OpenCode</text>
+  <text x="196" y="56" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="13" fill="#6b7280">鉴权层重构</text>
+
+  <rect x="40" y="74" width="220" height="656" fill="#fafbfc"/>
+  <path d="M260 74v656" stroke="#e8ebef"/>
+
+  <rect x="58" y="92" width="184" height="26" rx="6" fill="#eef1f4"/>
+  <text x="72" y="109" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#111827">首页</text>
+  <text x="72" y="143" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#4b5563">搜索会话</text>
+  <text x="72" y="177" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#4b5563">新建会话</text>
+
+  <text x="72" y="218" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" font-weight="600" fill="#9ca3af">最近</text>
+  <text x="72" y="248" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#374151">鉴权重构</text>
+  <text x="72" y="278" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#374151">CI 调试</text>
+  <text x="72" y="308" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#374151">缓存层</text>
+  <text x="72" y="338" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#374151">发布说明</text>
+
+  <text x="284" y="106" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="13" font-weight="600" fill="#111827">qicz</text>
+  <text x="320" y="106" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="13" fill="#9ca3af">/</text>
+  <text x="334" y="106" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="13" fill="#6b7280">鉴权层重构</text>
+
+  <rect x="284" y="130" width="500" height="44" rx="10" fill="#f3f4f6"/>
+  <text x="300" y="157" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#111827">帮我梳理一下这次鉴权重构。</text>
+
+  <text x="284" y="210" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#4b5563">计划是：把会话处理挪进一个小模块，现有中间件保留成薄适配器，</text>
+  <text x="284" y="230" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#4b5563">再补上迁移测试。</text>
+
+  <rect x="280" y="268" width="508" height="54" rx="10" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text x="298" y="292" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" font-weight="600" fill="#1d4ed8">为什么 CI 上构建失败？</text>
+  <text x="298" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11" fill="#64748b">本地能通过，但 CI 停在类型检查。</text>
+
+  <rect x="284" y="350" width="480" height="92" rx="10" fill="#0f172a"/>
+  <text x="300" y="374" font-family="SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#93c5fd">$ bun typecheck</text>
+  <text x="300" y="393" font-family="SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#e5e7eb">packages/app/src/session/screen.tsx:137</text>
+  <text x="300" y="412" font-family="SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#fca5a5">error TS2345: revealMessage expects a string</text>
+  <text x="300" y="431" font-family="SFMono-Regular,Menlo,Consolas,monospace" font-size="10.5" fill="#94a3b8">  but the id is string | undefined</text>
+
+  <text x="284" y="480" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#4b5563">CI 环境没有加载同一份缓存，我把这个判断显式写出来。</text>
+
+  <rect x="284" y="620" width="500" height="56" rx="12" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="302" y="648" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="12" fill="#9ca3af">继续提问…</text>
+  <circle cx="754" cy="648" r="12" fill="#111827"/>
+  <path d="M750 648h8M754 644v8" stroke="#ffffff" stroke-width="1.4" stroke-linecap="round"/>
+
+  <path d="M820 74v656" stroke="#e8ebef"/>
+  <rect x="820" y="74" width="340" height="656" fill="#ffffff"/>
+
+  <g transform="translate(840,94)">
+    <path d="M2 5h8M2 9h8M2 13h8" stroke="#6b7280" stroke-width="1.4" stroke-linecap="round"/>
+    <circle cx="1.5" cy="5" r="1" fill="#6b7280"/>
+    <circle cx="1.5" cy="9" r="1" fill="#6b7280"/>
+    <circle cx="1.5" cy="13" r="1" fill="#6b7280"/>
+  </g>
+  <text x="870" y="104" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="13" font-weight="600" fill="#111827">对话大纲</text>
+  <text x="1070" y="104" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11" text-anchor="end" fill="#9ca3af">6 轮</text>
+  <g transform="translate(1080,92)" stroke="#9ca3af" stroke-width="1.3" fill="none">
+    <path d="M12 1.5A5 5 0 1 0 12.2 5M12 .4v3.6H8.4"/>
+  </g>
+  <g transform="translate(1112,92)" stroke="#9ca3af" stroke-width="1.3" fill="none">
+    <path d="M8 2v8M4.5 7 8 10.5 11.5 7M2 12.5h12"/>
+  </g>
+
+  <rect x="840" y="124" width="300" height="32" rx="7" fill="#ffffff" stroke="#d1d5db"/>
+  <g transform="translate(848,132)" stroke="#9ca3af" stroke-width="1.2" fill="none">
+    <circle cx="5" cy="5" r="3.5"/>
+    <path d="m8 8 3 3"/>
+  </g>
+  <text x="866" y="144" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11" fill="#9ca3af">搜索这轮对话…</text>
+
+  <text x="848" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">1</text>
+  <text x="864" y="190" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11.5" fill="#111827">把鉴权中间件改成基于 session</text>
+  <text x="864" y="206" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">14:02</text>
+  <text x="848" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">2</text>
+  <text x="864" y="242" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11.5" fill="#111827">在设置里加一个深色模式开关</text>
+  <text x="864" y="258" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">14:08</text>
+    <rect x="836" y="270" width="308" height="56" rx="7" fill="#eff6ff"/>
+    <rect x="836" y="270" width="3" height="56" rx="1.5" fill="#3b82f6"/>
+  <text x="848" y="294" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#3b82f6">3</text>
+  <text x="864" y="294" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11.5" font-weight="600" fill="#1d4ed8">为什么 CI 上构建失败？</text>
+  <text x="864" y="310" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#60a5fa">14:15</text>
+    <g transform="translate(1108,282)" fill="none" stroke="#3b82f6" stroke-width="1.2">
+      <path d="M2 8h9M8 4.5 11.5 8 8 11.5"/>
+    </g>
+  <text x="848" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">4</text>
+  <text x="864" y="346" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11.5" fill="#111827">给新的缓存层补测试</text>
+  <text x="864" y="362" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">14:21</text>
+  <text x="848" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">5</text>
+  <text x="864" y="398" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11.5" fill="#111827">README 补上安装步骤</text>
+  <text x="864" y="414" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">14:27</text>
+  <text x="848" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">6</text>
+  <text x="864" y="450" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="11.5" fill="#111827">会话菜单里加一个导出按钮</text>
+  <text x="864" y="466" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">14:34</text>
+
+  <path d="M820 500h340" stroke="#f1f3f5"/>
+  <text x="844" y="528" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">点击任意一轮，跳到那条消息</text>
+
+  <g transform="translate(1068,318)">
+    <path d="M0 0l16 6-6.5 2.5L7 16z" fill="#111827" stroke="#ffffff" stroke-width="1.2"/>
+  </g>
+
+  <text x="40" y="752" font-family="-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC',sans-serif" font-size="10" fill="#9ca3af">示意图（示例数据）· illustration with sample data</text>
+</svg>
